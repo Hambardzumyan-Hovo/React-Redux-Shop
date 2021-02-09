@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/React-Redux-Shop/static/css/main.4b1672c7.chunk.css",
+    "main.js": "/React-Redux-Shop/static/js/main.9ca42ba3.chunk.js",
+    "main.js.map": "/React-Redux-Shop/static/js/main.9ca42ba3.chunk.js.map",
+    "runtime-main.js": "/React-Redux-Shop/static/js/runtime-main.fbf23ac8.js",
+    "runtime-main.js.map": "/React-Redux-Shop/static/js/runtime-main.fbf23ac8.js.map",
+    "static/js/2.40b56550.chunk.js": "/React-Redux-Shop/static/js/2.40b56550.chunk.js",
+    "static/js/2.40b56550.chunk.js.map": "/React-Redux-Shop/static/js/2.40b56550.chunk.js.map",
+    "index.html": "/React-Redux-Shop/index.html",
+    "static/css/main.4b1672c7.chunk.css.map": "/React-Redux-Shop/static/css/main.4b1672c7.chunk.css.map",
+    "static/js/2.40b56550.chunk.js.LICENSE.txt": "/React-Redux-Shop/static/js/2.40b56550.chunk.js.LICENSE.txt",
+    "static/media/bathroom.9e4def42.png": "/React-Redux-Shop/static/media/bathroom.9e4def42.png",
+    "static/media/bed_1.3795db14.jpg": "/React-Redux-Shop/static/media/bed_1.3795db14.jpg",
+    "static/media/bed_2.9631fa60.jpg": "/React-Redux-Shop/static/media/bed_2.9631fa60.jpg",
+    "static/media/bedroom.816867d3.png": "/React-Redux-Shop/static/media/bedroom.816867d3.png",
+    "static/media/bs1.894c0af7.png": "/React-Redux-Shop/static/media/bs1.894c0af7.png",
+    "static/media/bs2.8918d470.png": "/React-Redux-Shop/static/media/bs2.8918d470.png",
+    "static/media/bs3.0e81fa78.png": "/React-Redux-Shop/static/media/bs3.0e81fa78.png",
+    "static/media/bs4.715b15cf.png": "/React-Redux-Shop/static/media/bs4.715b15cf.png",
+    "static/media/kitchen.96b43d9d.png": "/React-Redux-Shop/static/media/kitchen.96b43d9d.png",
+    "static/media/living.79be81df.png": "/React-Redux-Shop/static/media/living.79be81df.png",
+    "static/media/main.b135f8bd.png": "/React-Redux-Shop/static/media/main.b135f8bd.png",
+    "static/media/table_1.a01d8727.jpg": "/React-Redux-Shop/static/media/table_1.a01d8727.jpg",
+    "static/media/table_2.4bb93692.jpg": "/React-Redux-Shop/static/media/table_2.4bb93692.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.fbf23ac8.js",
+    "static/js/2.40b56550.chunk.js",
+    "static/css/main.4b1672c7.chunk.css",
+    "static/js/main.9ca42ba3.chunk.js"
+  ]
+}
