@@ -5,15 +5,19 @@ import { deleteItem } from "../../../redux/basketReducer";
 import useStyles from "./styles";
 import mc from "../../../assets/mc.png";
 import NumberFormat from "react-number-format";
+import { useForm } from "react-hook-form";
 
 const Card = ({ menu, setMenu, itemToBuy }) => {
   const classes = useStyles();
   const dispatch = useDispatch();
+  const { register, handleSubmit } = useForm();
 
-  const handleClick = () => {
+  const onSubmit = data => {
     let id = itemToBuy.id;
-    dispatch(deleteItem(id));
-    setMenu(false);
+    if (data) {
+      dispatch(deleteItem(id));
+      setMenu(false);
+    }
   };
 
   const creditCardFormat = props => {
@@ -35,17 +39,20 @@ const Card = ({ menu, setMenu, itemToBuy }) => {
     { field: "CVC", format: cvcFormat },
   ];
   return (
-    <div className={!menu ? classes.container : `${classes.container} ${classes.showContainer}`}>
+    <form
+      onSubmit={handleSubmit(onSubmit)}
+      className={!menu ? classes.container : `${classes.container} ${classes.showContainer}`}>
       <div className={classes.card}>
         <img src={mc} />
         <hr className={classes.line_1} />
         <hr className={classes.line_2} />
         <div className={classes.cardDetails}>
           {creaditCardInfo.map((element, i) => {
-            console.log(element);
             return (
               <TextField
                 key={i}
+                name={element.field}
+                inputRef={register}
                 required={true}
                 classes={{ root: element.class }}
                 InputProps={{
@@ -70,12 +77,12 @@ const Card = ({ menu, setMenu, itemToBuy }) => {
         <div className={classes.innerContainer}>
           <h3 className={classes.itemName}>{itemToBuy.name}</h3>
           <h3 className={classes.itemPrice}>${itemToBuy.price}</h3>
-          <Button className={classes.acceptBtn} onClick={handleClick}>
+          <Button className={classes.acceptBtn} type='submit'>
             <h6 className={classes.btnText}>Accept</h6>
           </Button>
         </div>
       </div>
-    </div>
+    </form>
   );
 };
 

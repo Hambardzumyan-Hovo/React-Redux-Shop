@@ -10,7 +10,7 @@ const reducers = combineReducers({
 
 const loadState = () => {
   try {
-    const localState = localStorage.getItem("state");
+    const localState = sessionStorage.getItem("state");
     if (!localState) {
       return undefined;
     } else {
@@ -24,7 +24,7 @@ const loadState = () => {
 const saveState = state => {
   try {
     const localState = JSON.stringify(state);
-    localStorage.setItem("state", localState);
+    sessionStorage.setItem("state", localState);
   } catch (err) {
     console.log(err);
   }

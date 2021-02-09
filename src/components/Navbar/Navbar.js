@@ -11,7 +11,7 @@ const Navbar = () => {
   const classes = useStyles();
   const location = useLocation();
   const basket = useSelector(state => state.basket);
-  console.log(location.pathname.slice(1));
+
   return (
     <AppBar className={classes.root}>
       <div className={classes.logo}>

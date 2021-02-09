@@ -13,6 +13,8 @@ const basketReducer = (state = initialState, action) => {
   }
 };
 
+//thunk & ac
+//Is called from components/Items/Itmes.js
 export const addItem = item => {
   return (dispatch, getState) => {
     const basket = getState().basket;
@@ -27,7 +29,9 @@ export const addItem = item => {
   };
 };
 
+//Is called from components/Basket/Card/Card.js
 export const deleteItem = id => {
   return { type: "DELETE_ITEM", id };
 };
+
 export default basketReducer;

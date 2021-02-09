@@ -6,6 +6,7 @@ import tb1 from "../assets/table_1.jpg";
 import tb2 from "../assets/table_2.jpg";
 import bed1 from "../assets/bed_1.jpg";
 import bed2 from "../assets/bed_2.jpg";
+//As there is no back-end I'm creating initial state here
 const initialState = {
   selects: [
     {
@@ -16,17 +17,17 @@ const initialState = {
           label: "Sofas",
           products: [
             { name: "Sofa Francesca", id: 1, img: bs1, price: 300 },
-            { name: "Sofa Francesca", id: 2, img: bs2, price: 350 },
-            { name: "Sofa Francesca", id: 3, img: bs3, price: 400 },
-            { name: "Sofa Francesca", id: 4, img: bs4, price: 450 },
+            { name: "Sofa Loane", id: 2, img: bs2, price: 350 },
+            { name: "Sofa Etenesh", id: 3, img: bs3, price: 400 },
+            { name: "Sofa Delilah", id: 4, img: bs4, price: 450 },
           ],
         },
         {
           value: "tables",
           label: "Tables",
           products: [
-            { name: "Table Francesca", id: 5, img: tb1, price: 150 },
-            { name: "Table Francesca", id: 6, img: tb2, price: 200 },
+            { name: "Table Tetiana", id: 5, img: tb1, price: 150 },
+            { name: "Table Julia", id: 6, img: tb2, price: 200 },
           ],
         },
         { value: "chairs", label: "Chairs" },
@@ -40,8 +41,8 @@ const initialState = {
           value: "beds",
           label: "Beds",
           products: [
-            { name: "Table Francesca", id: 7, img: bed1, price: 400 },
-            { name: "Table Francesca", id: 8, img: bed2, price: 450 },
+            { name: "Bed Gemma", id: 7, img: bed1, price: 400 },
+            { name: "Bed Silje", id: 8, img: bed2, price: 450 },
           ],
         },
         { value: "closets", label: "Closets" },
@@ -71,10 +72,11 @@ const productsReducer = (state = initialState, action) => {
   }
 };
 
+//thunk
+//Is called from components/Products/Filter/Filter.js
 export const setActiveSelect = (selectName, value) => {
   return (dispatch, getState) => {
     const selects = getState().products.selects;
-
     selects.forEach(select => {
       if (select.name === selectName) {
         for (let i = 0; i < select.categories.length; i++) {

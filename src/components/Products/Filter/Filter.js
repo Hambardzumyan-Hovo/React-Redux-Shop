@@ -34,7 +34,6 @@ const Filter = ({ selects, activeSelect }) => {
   return (
     <div className={classes.filter}>
       {selects.map((select, i) => {
-        console.log(select.categories);
         return (
           <Select
             key={i}

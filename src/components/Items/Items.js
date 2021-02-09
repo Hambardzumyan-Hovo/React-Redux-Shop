@@ -20,7 +20,6 @@ const Items = ({ id, name, img, price }) => {
   const handleClick = () => {
     const item = { id, name, img, price };
     dispatch(addItem(item));
-    console.log("add item", item);
   };
 
   return (
