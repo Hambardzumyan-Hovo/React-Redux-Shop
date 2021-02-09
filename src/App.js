@@ -1,4 +1,4 @@
-import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
+import { Route, Switch, HashRouter } from "react-router-dom";
 import "./App.css";
 import Basket from "./components/Basket/Basket";
 import Home from "./components/Home/Home";
@@ -8,7 +8,7 @@ import ProductsContainer from "./components/Products/ProductsContainer";
 function App() {
   return (
     <div className='App'>
-      <Router>
+      <HashRouter>
         <Navbar />
         <Switch>
           <Route exact path='/'>
@@ -21,7 +21,7 @@ function App() {
             <Basket />
           </Route>
         </Switch>
-      </Router>
+      </HashRouter>
     </div>
   );
 }
